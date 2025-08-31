@@ -21,17 +21,15 @@ body {
     var(--c-55) 100%
   );
   min-height: 100vh;
-  /* margin-top: -80px;  <-- remove this */
-  /* margin: 0; already set */
-  padding-top: 80px; /* keep this for navbar offset */
+
+  padding-top: 80px; 
 }
 
 html {
   font-size: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* scroll-padding-top: 6rem; */
-  /* scroll-behavior: smooth; */
+
   scroll-padding-top: 80px;
 }
 .heading {
@@ -88,6 +86,7 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     height: 80px; 
       padding: 0 40px; 
+  background: linear-gradient(135deg, #1e90ff, #20c997);
 } 
 
 
@@ -129,7 +128,7 @@ section {
 }
 
 .logo a:hover i {
-  color: #3ce323;
+  color: #1d980a;
   transform: rotate(20deg) translateY(-2px);
 }
 
@@ -167,6 +166,7 @@ section {
   text-align: center;
   padding: 10px;
   background-color: rgba(57, 168, 164, 0.85);
+  background-color: rgba(27, 161, 157, 0.85);
 }
 .search-bar input {
   border: 1px solid black;
@@ -264,6 +264,7 @@ section {
   letter-spacing: 1px;
   color: #151515;
   background-color: #11bf8b;
+  background-color: rgb(20, 208, 117);
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -276,8 +277,10 @@ section {
 .login-form form .btn:hover {
   background-color: #26c69e;
   color: white;
+  background-color: #05635e;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #98c6f5;
 }
 
 .login-form form .btn:active {
@@ -610,7 +613,6 @@ section {
 
 .offers {
   padding: 2rem;
-
  background: linear-gradient(to right, #98c6f5, #8fecd0);
 }
 
@@ -620,10 +622,13 @@ section {
   margin-bottom: 0.25rem;
   color: #1b9f77;
 }
+.heading span{
+  font-size: 43px;
+}
 
 .sub-heading {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #0d0d0d;
 }
@@ -640,7 +645,6 @@ section {
 
 .offer-left .box {
   flex: 1;
-
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.8rem;
@@ -649,14 +653,14 @@ section {
 }
 
 .offer-left .box i.icon {
-  font-size: 2rem;
+  font-size: 2.7rem;
   color: #1b9f77;
   margin-bottom: 0.5rem;
 }
 
 .offer-left .box h3 {
   margin: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #060606;
 }
 

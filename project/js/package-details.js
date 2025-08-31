@@ -10,7 +10,6 @@ const SERVICE_COSTS = {
   dinner: 45,     
   tour: 150,       
   transport: 100   
-  
 };
 
 // ======= CITY IMAGES FOR SLIDER =======
@@ -23,75 +22,74 @@ const cityImages = {
     "imges/images/paris5.jpg"
   ],
   "London": [
-    "images/images/london1.jpg",
-    "images/images/london2.jpg",
-    "images/images/london3.jpg",
-    "images/images/london4.jpg",
-    "images/images/london5.jpg"
+    "images/images/london1.jpeg",
+    "images/images/london2.jpeg",
+    "images/images/london3.jpeg",
+    "images/images/london4.jpeg",
+    "images/images/london5.jpeg"
   ],
   "India": [
-    "images/images/india1.jpg",
-    "images/images/india2.jpg",
-    "images/images/india3.jpg",
-    "images/images/india4.jpg",
-    "images/images/india5.jpg"
+    "images/images/india1.jpeg",
+    "images/images/india2.jpeg",
+    "images/images/india3.jpeg",
+    "images/images/india4.jpeg",
+    "images/images/india5.jpeg"
   ],
   "Bangladesh": [
-    "images/images/bang1.jpg",
-    "images/images/bang2.jpg",
-    "images/images/bang3.jpg",
-    "images/images/bang4.jpg",
-    "images/images/bang5.jpg"
+    "images/images/ban1.jpeg",
+    "images/images/ban2.jpeg",
+    "images/images/ban3.jpeg",
+    "images/images/ban4.jpeg",
+    "images/images/ban5.jpeg"
   ],
   "Japan": [
-    "images/images/japan1.jpg",
-    "images/images/japan2.jpg",
-    "images/images/japan3.jpg",
-    "images/images/japan4.jpg",
-    "images/images/japan5.jpg"
+    "images/images/japan1.jpeg",
+    "images/images/japan4.jpeg",
+    "images/images/japan3.jpeg",
+    "images/images/japan7.jpeg",
+    "images/images/japan5.jpeg"
   ],
   "Bali": [
-    "images/images/Bali1.jpg",
-    "images/images/Bali2.jpg",
-    "images/images/Bali3.jpg",
-    "images/images/Bali4.jpg",
-    "images/images/Bali5.jpg"
+    "images/images/Bali1.jpeg",
+    "images/images/Bali2.jpeg",
+    "images/images/Bali3.jpeg",
+    "images/images/Bali4.jpeg",
+    "images/images/Bali5.jpeg"
   ],
   "Thailand": [
-    "images/images/thai1.jpg",
-    "images/images/thai2.jpg",
-    "images/images/thai3.jpg",
-    "images/images/thai4.jpg",
-    "images/images/thai5.jpg"
+    "images/images/thai1.jpeg",
+    "images/images/thai2.jpeg",
+    "images/images/thai3.jpeg",
+    "images/images/thai4.jpeg",
+    "images/images/thai5.jpeg"
   ],
   "Switzerland": [
-    "images/images/swit1.jpg",
-    "images/images/swit2.jpg",
-    "images/images/swit3.jpg",
-    "images/images/swit4.jpg",
-    "images/images/swit5.jpg"
+    "images/images/swit1.jpeg",
+    "images/images/swit2.jpeg",
+    "images/images/swit3.jpeg",
+    "images/images/swit4.jpeg",
+    "images/images/swit5.jpeg"
   ],
   "Nepal": [
-    "images/images/nep1.jpg",
-    "images/images/nep2.jpg",
-    "images/images/nep3.jpg",
-    "images/images/nep4.jpg",
-    "images/images/nep5.jpg"
+    "images/images/nep1.jpeg",
+    "images/images/nep2.jpeg",
+    "images/images/nep3.jpeg",
+    "images/images/nep4.jpeg",
+    "images/images/nep5.jpeg"
   ],
   "Maldives": [
-
-    "images/images/mal1.jpg",
-    "images/images/mal2.jpg",
-    "images/images/mal3.jpg",
-    "images/images/mal4.jpg",
-    "images/images/mal5.jpg"
+    "images/images/mal1.jpeg",
+    "images/images/mal2.jpeg",
+    "images/images/mal3.jpeg",
+    "images/images/mal4.jpeg",
+    "images/images/mal5.jpeg"
   ],
   "Rome": [
-    "images/images/rome1.jpg",
-    "images/images/rome2.jpg",
-    "images/images/rome3.jpg",
-    "images/images/rome4.jpg",
-    "images/images/rome5.jpg"
+    "images/images/rome6.jpeg",
+    "images/images/rome7.jpeg",
+    "images/images/rome3.jpeg",
+    "images/images/rome4.jpeg",
+    "images/images/rome5.jpeg"
   ],
   "Paris": [
     "images/images/paris1.jpeg",
@@ -232,4 +230,13 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('click', (e) => {
     if (e.target === bookingModal) bookingModal.style.display = 'none';
   });
+
+  // ======= BACK ARROW FUNCTIONALITY =======
+  const backArrow = document.querySelector('.back-arrow');
+  if (backArrow) {
+    backArrow.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.history.back();
+    });
+  }
 });
