@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+<nav class="navbar">
+    <div id="menuBar" class="fas fa-bars"></div> 
+    <div class="logo">
+        <h4>
+            <span class="gradient-letter">T</span>rip
+            <br>
+            <span class="gradient-letter">M</span>ate
+        </h4>
+        <a href="#"><i class="fa-solid fa-plane-departure"></i></a>
+    </div>
+
+    <div class="icons">
+        <a href="#">Home</a>
+        <a href="#">Destination</a>
+        <a href="#">Packages</a>
+        <a href="#">Booking</a>
+        <a href="#">Services</a>
+        <a href="#">Special Offers</a>
+        <a href="#">Travel Blog</a>
+        <a href="#">Review</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="nav-right">
+        <a href="#"><i class="fa-solid fa-user" id="login-btn"></i></a>
+        <a href="#"><i class="fa-solid fa-magnifying-glass search-icon" id="searchToggle"></i></a>
+    </div>
+</nav>
+
+
+<div class="search-bar" id="searchForm">
+    <input type="text" placeholder="search here..." name="search">
+</div>
+
+  <div class="overlay" id="overlay"></div>
+<div class="login-form">
+  
+  <form action="" >
+    <i class="fas fa-times" id="form-close"></i>
+  </br>
+    <h3>Login</h3>
+    <input type="email" class="box" placeholder="Enter your email">
+  <input type="password" class="box" placeholder="Enter your password">
+  <input type="submit" value="login-now" class="btn">
+  <input type="checkbox" id="remember">
+<label for="remember">remember me</label>
+<p>forget password? <a href="#">click here</a></p>
+<p>don't have any account?<a href="#">register now</a></p>
+
+
+
+  </form>
+</div>
+
+
+<section class="Home" id="home">
+
+  <div class="content">
+    <p>Lets travel the world with us</p>
+    
+    <h3>Create memories, not just trips</h3>
+    <a href="#" class="btn">Explore Now</a>
+  </div>
+  <div class="controls">
+    <span class="vidBtn active" data-src="images/traffic.mp4"></span>
+        <span class="vidBtn" data-src="images/sunset.mp4"></span>
+            <span class="vidBtn" data-src="images/train.mp4"></span>
+  </div>
+  <div class="Video-Container">
+    <video src="images/sunset.mp4" id="video-slider" loop autoplay muted></video> 
+  </div>
+</section>
+<section class="destination" id="des">
+  <h1 class="heading">
+    <span>D</span>
+    <span>E</span>
+    <span>S</span>
+    <span>T</span>
+    <span>I</span>
+    <span>N</span>
+    <span>A</span>
+    <span>T</span>
+    <span>I</span>
+    <span>O</span>
+    <span>N</span>
+  </h1>
+  <div class="box-container">
+    <div class="box">
+           <div class="slider">
+      <img src="images/saintmertain.jpg" alt="pic">
+      <img src="images/view-from-chandranath.jpg" alt="pic">
+      <img src="images/ahsan-monjil.jpg" alt="pic">
+         </div>
+      <div class="content">
+        <h3>Bangladesh</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+      
+    </div>
+
+       <div class="box">
+          <div class="slider">
+    <img src="images/bali.jpeg" alt="">
+    <img src="images/-Bali-SM.jpg" alt="">
+    <img src="images/balidestination_avif.avif" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Bali</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+       <div class="slider">
+    <img src="images/thailandjpg.jpg" alt="">
+    <img src="images/thai.jpg" alt="">
+    <img src="images/thailan.pg.jpg" alt="">
+  </div>
+    
+   
+      <div class="content">
+        <h3>Thailand</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+
+    <div class="box">
+     <div class="slider">
+    <img src="images/swit,jpg.avif" alt="">
+    <img src="images/swiz.jpg" alt="">
+    <img src="images/swww.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Switzerland</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="slider">
+    <img src="images/taj-mahal.jpg" alt="">
+    <img src="images/howrah-bridge.jpg" alt="">
+    <img src="images/delhi.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Taj Mahal</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+      <div class="slider">
+    <img src="images/the-london-jpg.jpg" alt="">
+    <img src="images/londonr.jpg" alt="">
+    <img src="images/hyde-park.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>London</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+ <div class="slider">
+    <img src="images/Maldives.jpg" alt="">
+    <img src="images/mal.jpg" alt="">
+    <img src="images/Maldives_0f18c48b3e.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Maldives</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+ <div class="slider">
+    <img src="images/Kashmir-valley.jpg" alt="">
+    <img src="images/Shikara-boatse.jpg" alt="">
+    <img src="images/kash.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Kashmir-valley</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <div class="box">
+  <div class="slider">
+    <img src="images/nepal.jpg" alt="">
+    <img src="images/nepjpg.jpg" alt="">
+    <img src="images/pokhara.jpg.jpg" alt="">
+  </div>
+    
+      <div class="content">
+        <h3>Nepal</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ducimus vitae. Alias nisi ipsa ad architecto, laboriosam facere deleniti quae?</p>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offers" id="offers">
+  <h1 class="heading">Our Special <span>Offers</span></h1>
+  <p class="sub-heading">Choose the best deal that suits you</p>
+
+  <div class="offer-details">
+    <div class="offer-left">
+      <div class="box">
+        <i class="fa-solid fa-user-graduate icon"></i>
+        <h3>Student Offers</h3>
+        <p>Special discounts for students on tours and packages. Valid student ID required.</p>
+        <div class="price">Save up to <span>20%</span></div>
+        <a href="#" class="btn">Grab Offer</a>
+      </div>
+    </div>
+
+    <div class="offer-right">
+      <div class="facilities-box">
+        <h3>Facilities You’ll Get:</h3>
+        <ul>
+          <li>📌 20% discount on all trips</li>
+          <li>📌 Free city tour guide</li>
+          <li>📌 Flexible payment options</li>
+          <li>📌 24/7 support for students</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="offer-details">
+    <div class="offer-left">
+      <div class="box">
+        <i class="fa-solid fa-users icon"></i>
+        <h3>Group Discount</h3>
+        <p>Traveling with friends or family? Get exclusive group discounts for 4+ people.</p>
+        <div class="price">Flat <span>25% OFF</span></div>
+        <a href="#" class="btn">Grab Offer</a>
+      </div>
+    </div>
+
+    <div class="offer-right">
+      <div class="facilities-box">
+        <h3>Facilities You’ll Get:</h3>
+        <ul>
+          <li>📌 Extra 25% off for groups of 4+</li>
+          <li>📌 Free dinner on first night</li>
+          <li>📌 Private guide for your group</li>
+          <li>📌 Complimentary group photoshoot</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="offer-details">
+    <div class="offer-left">
+      <div class="box">
+        <i class="fa-solid fa-calendar-days icon"></i>
+        <h3>Sessional Offers</h3>
+        <p>Enjoy seasonal packages during summer, winter & festivals at amazing prices.</p>
+        <div class="price">Up to <span>30% OFF</span></div>
+        <a href="#" class="btn">Grab Offer</a>
+      </div>
+    </div>
+
+    <div class="offer-right">
+      <div class="facilities-box">
+        <h3>Facilities You’ll Get:</h3>
+        <ul>
+          <li>📌 30% discount during festivals</li>
+          <li>📌 Complimentary welcome gift</li>
+          <li>📌 Free local festival passes</li>
+          <li>📌 Extra benefits for early booking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
