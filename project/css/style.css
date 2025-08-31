@@ -45,10 +45,10 @@ section {
 }
 
 .Home .btn:hover {
-  background-color: #20c997;
+  background-color: #32f0b7;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  color: #d3e0ec;
+  color: #3f2626;
 }
 .btn:active {
   transform: translateY(0) scale(0.98);
@@ -65,9 +65,16 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 } 
 
-.navbar a:hover {
+/* .navbar a:hover {
   color: white;
+} */
+ .navbar a {
+  color: white !important;
 }
+.navbar a:hover {
+  color: #101010 !important;
+}
+
 
 .logo {
   display: flex;
@@ -93,13 +100,13 @@ section {
 }
 
 .logo a i {
-  color: #1d1f21; /* plane color */
+  color: #1d1f21; 
   font-size: 1.8rem;
   transition: transform 0.3s, color 0.3s;
 }
 
 .logo a:hover i {
-  color: #3ce323; /* hover color */
+  color: #3ce323;
   transform: rotate(20deg) translateY(-2px);
 }
 
@@ -114,7 +121,7 @@ section {
   border: 1px solid black;
   border-radius: 30px;
   padding: 7px 9px;
-  background-color: #144d4b;
+  background-color: #2aeee8;
   color: white;
 }
 
@@ -125,11 +132,12 @@ section {
 }
 .nav-right i {
   font-size: 20px;
-  color: white;
+  color: rgb(15, 15, 15);
   cursor: pointer;
+  font-size: 25px;
 }
 
-/* search-bar hidden by default */
+
 .search-bar {
   display: none;
   width: 100%;
@@ -146,7 +154,6 @@ section {
   width: 50%;
 }
 
-/* when active (JS toggle করবে) */
 .search-bar.active {
   display: block;
 }
@@ -368,7 +375,8 @@ section {
 }
 .Home .content h3 {
   font-size: 3.5rem;
-  color: #7fe9c9;
+  color: #14bb89;
+
   text-transform: uppercase;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -563,66 +571,10 @@ section {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
-/* .special-packges .box-container{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-    justify-content: center;
-}
-.special-packges .box-container .box{
-  flex: 1 1 20rem;
-  border-radius: .5rem;
-  overflow: hidden;
-  box-shadow:  0 1rem 2rem rgba(0,0,0,0.1);
-}
-
-.special-packges .box-container .box img{
-  height: 22rem;
-  width: 100%;
-  object-fit: cover;
-}
-.special-packges .box-container .box .content{
- padding: 1rem 1.2rem;
-}
-.special-packges .box-container .box .content h3{
-  font-size: 2rem;
-  color: #060606;
-}
-
-.special-packges .box-container .box .content h3 i{
-  color: #0a627d;
-}
-.special-packges .box-container .box .content p {
-  margin-bottom: .5rem; 
-  color: #151515;
-  font-size: 1rem;
-  line-height: 1.4;  
-}
-.special-packges .box-container .box .content .stars i{
-  
-  color: #27b087;
-  font-size:1.2rem ;
-
-}
-
-.special-packges .box-container .box .content .price{
-    color: #27b087;
-  font-size:1.3rem ;
-  padding-top:.5rem ;
-
-}
-
-.special-packges .box-container .box .content .price span{
-  text-decoration: line-through;
-  
-  color: #151515;
-  font-size: 1.3rem;
-
-} */
 
 .offers {
   padding: 2rem;
-  /* background: linear-gradient(135deg, #1e90ff, #20c997);   */
+
   background: #eff6f6;
 }
 
@@ -646,7 +598,7 @@ section {
   flex-wrap: wrap;
   margin-bottom: 3rem;
 
-  align-items: center; /* vertical center-align */
+  align-items: center; 
   justify-content: center;
 }
 
@@ -759,4 +711,4 @@ section {
   .facilities-box ul li {
     font-size: 0.9rem;
   }
-}
+}  
