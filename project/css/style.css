@@ -82,11 +82,9 @@ section {
   backdrop-filter: blur(6px);
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #1e90ff, #20c997);
 } 
 
-/* .navbar a:hover {
-  color: white;
-} */
  .navbar a {
   color: white !important;
 }
@@ -125,7 +123,7 @@ section {
 }
 
 .logo a:hover i {
-  color: #3ce323;
+  color: #1d980a;
   transform: rotate(20deg) translateY(-2px);
 }
 
@@ -162,7 +160,7 @@ section {
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: rgba(20,77,75,0.85);
+  background-color: rgba(27, 161, 157, 0.85);
 }
 .search-bar input {
   border: 1px solid black;
@@ -258,7 +256,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #151515;
-  background-color: white;
+  background-color: rgb(20, 208, 117);
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -269,9 +267,10 @@ section {
 }
 
 .login-form form .btn:hover {
-  background-color: #20c997;
+  background-color: #05635e;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: #98c6f5;
 }
 
 .login-form form .btn:active {
@@ -592,7 +591,6 @@ section {
 
 .offers {
   padding: 2rem;
-
  background: linear-gradient(to right, #98c6f5, #8fecd0);
 }
 
@@ -602,10 +600,13 @@ section {
   margin-bottom: 0.25rem;
   color: #1b9f77;
 }
+.heading span{
+  font-size: 43px;
+}
 
 .sub-heading {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   color: #0d0d0d;
 }
@@ -622,7 +623,6 @@ section {
 
 .offer-left .box {
   flex: 1;
-
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.8rem;
@@ -631,14 +631,14 @@ section {
 }
 
 .offer-left .box i.icon {
-  font-size: 2rem;
+  font-size: 2.7rem;
   color: #1b9f77;
   margin-bottom: 0.5rem;
 }
 
 .offer-left .box h3 {
   margin: 0.5rem 0;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: #060606;
 }
 
