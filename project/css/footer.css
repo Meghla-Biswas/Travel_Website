@@ -1,54 +1,56 @@
-.footer{
-  background:darkcyan;
-}
-
-.footer .box-container{
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 35px 9%;
+  font-size: medium; /* font size medium */
+  height: 70vh; /* one third page height */
   display: flex;
-  flex-wrap: wrap;
-  gap:1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer .box-container .box{
-  padding:1rem 0;
-  flex:1 1 25rem;
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.footer .box-container .box h3{
-  font-size: 2rem;
-  padding:.7rem 0;
-  color:#fff;
+.footer .box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #20c997;
 }
 
-.footer .box-container .box p{
-  font-size: 2rem;
-  padding:.7rem 0;
-  color:#eee;
+.footer .box p {
+  color: #ddd;
+  line-height: 1.5;
 }
 
-.footer .box-container .box a{
+.footer .box a {
   display: block;
-  font-size: 1.5rem;
-  padding:.7rem 0;
-  color:#eee;
+  color: #bbb;
+  margin: 5px 0;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
-.footer .box-container .box a:hover{
-  color:var(--orange);
-  text-decoration: underline;
+.footer .box a:hover {
+  color: #1e90ff;
+  padding-left: 5px;
 }
 
-.footer .credit{
+.footer .box a i {
+  margin-right: 8px;
+  color: #1e90ff;
+}
+
+.footer .credit {
   text-align: center;
-  padding:2rem 1rem;
-  margin-top: 1rem;
-  font-size: 2rem;
-  font-weight: normal;
-  color:#fff;
-  border-top: .1rem solid rgba(255,255,255,.2);
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #aaa;
 }
 
-.footer .credit span{
-  color:var(--orange);
+.footer .credit span {
+  color: #20c997;
 }
-
-
