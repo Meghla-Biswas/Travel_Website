@@ -1,5 +1,5 @@
 .footer{
-  background:#333;
+  background:darkcyan;
 }
 
 .footer .box-container{
@@ -14,13 +14,13 @@
 }
 
 .footer .box-container .box h3{
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding:.7rem 0;
   color:#fff;
 }
 
 .footer .box-container .box p{
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding:.7rem 0;
   color:#eee;
 }
