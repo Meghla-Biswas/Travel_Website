@@ -445,7 +445,7 @@ section {
 
 .destination .box-container .box {
   position: relative;
-  flex: 1 1 20rem;
+  flex: 1 1 15rem;
   height: 22rem;
   overflow: hidden;
   border-radius: 15px;
