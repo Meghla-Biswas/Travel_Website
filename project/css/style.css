@@ -22,7 +22,7 @@ body {
   );
   min-height: 100vh;
 
-  padding-top: 80px; 
+  padding-top: 90px; 
 }
 
 html {
@@ -30,7 +30,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 
-  scroll-padding-top: 80px;
+  scroll-padding-top: 90px;
 }
 .heading {
   text-align: center;
@@ -84,7 +84,7 @@ section {
   backdrop-filter: blur(6px);
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    height: 80px; 
+    height: 90px; 
       padding: 0 40px; 
   background: linear-gradient(135deg, #1e90ff, #20c997);
 } 
@@ -136,7 +136,7 @@ section {
   text-decoration: none;
   color: rgb(243, 233, 233);
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .navbar .icons a:hover {
