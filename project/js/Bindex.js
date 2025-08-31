@@ -47,7 +47,7 @@ var swiper = new Swiper(".review-slider", {
       slidesPerView: 3,
     },
   },
-// });  
+});  
 
 
 
@@ -66,19 +66,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   } else {
     alert("⚠️ Please fill in all fields before submitting.");
   }
-});
-
-
-
-
-
-
-
-
-
-
-
-
+})
 
 
 
