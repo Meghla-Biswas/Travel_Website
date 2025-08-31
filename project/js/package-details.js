@@ -6,10 +6,11 @@ const price = parseFloat(urlParams.get("price")) || 0;
 const defaultDays = parseInt(urlParams.get("days")) || 1;
 
 const SERVICE_COSTS = {
-  breakfast: 30,   // per day
-  dinner: 45,      // per day
-  tour: 150,       // one-time
-  transport: 100   // one-time
+  breakfast: 30,   
+  dinner: 45,     
+  tour: 150,       
+  transport: 100   
+  
 };
 
 // ======= CITY IMAGES FOR SLIDER =======
