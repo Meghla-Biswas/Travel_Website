@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #1e90ff, #20c997);
+  margin: 0;
+  padding: 0;
+}
+
+.contact {
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.heading {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image img {
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+form {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  flex: 1;
+  max-width: 500px;
+  animation: fadeInUp 1s ease;
+}
+
+.inputBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.inputBox input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn {
+  background: #1e90ff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #20c997;
+}
+
+/* Calendar */
+.calendarBox {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.calendarBox input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: white;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: yellow;
+  transform: scale(1.2);
+}
+
+/* Map */
+.map {
+  margin-top: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

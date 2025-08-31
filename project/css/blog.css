@@ -1,0 +1,63 @@
+/* Travel Blog Section */
+.blog {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right,  #8fecd0,#98c6f5);
+}
+
+.blog .heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #1a7b5e;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  font-size: 2rem;
+  color: #006d77;
+  margin-bottom: 1rem;
+}
+
+.blog-card p {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.blog-card video {
+  width: 100%;
+  border-radius: 1rem;
+  outline: none;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: .5rem;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}

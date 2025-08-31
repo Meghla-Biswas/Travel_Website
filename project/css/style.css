@@ -1,9 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --c-95: #ffffff; --c-90:#f9fffb; --c-85:#f0fff7; --c-80:#e6fff4; --c-75:#ddffef;
+  --c-70:#d4ffea; --c-65:#ccffe6; --c-60:#c2ffe2; --c-55:#b8ffdd; --c-50:#adffd8;
+  --c-45:#a3ffd3; --c-40:#99ffcc; --c-35:#80ffbf; --c-30:#66ffb3; --c-25:#4dffa6;
+  --c-20:#33ff99; --c-15:#1aff8c;
 }
 
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #073b2d;
+  background: linear-gradient(
+    135deg,
+    var(--c-70),
+    var(--c-68) 20%,
+    var(--c-65) 40%,
+    var(--c-62) 60%,
+    var(--c-60) 80%,
+    var(--c-55) 100%
+  );
+  min-height: 100vh;
+  padding: 0;
+}
 
 html {
   font-size: 100%;
@@ -427,13 +446,13 @@ section {
 
 .destination {
   padding: 4rem 9%;
-  background: rgb(172, 211, 242);
+  background: linear-gradient(to right,  #8fecd0,#98c6f5);
 
 }
 
 .destination  .heading span{
   color: white;;
-  background-color: #2c88e4;
+  background-color: #2f71b4;
 }
 .destination .heading {
   text-align: center;
@@ -452,7 +471,7 @@ section {
 
 .destination .box-container .box {
   position: relative;
-  flex: 1 1 15rem;
+  flex: 1 1 17rem;
   height: 22rem;
   overflow: hidden;
   border-radius: 15px;
@@ -574,7 +593,7 @@ section {
 .offers {
   padding: 2rem;
 
-  background: #eff6f6;
+ background: linear-gradient(to right, #98c6f5, #8fecd0);
 }
 
 .heading {
