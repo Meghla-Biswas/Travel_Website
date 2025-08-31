@@ -430,11 +430,9 @@ section {
   background: white;
 }
 
-.destination .heading span:nth-child(odd) {
-  color: #1e90ff;
-}
-.destination .heading span:nth-child(even) {
-  color: #20c997;
+.destination  .heading span{
+  color: white;;
+  background-color: #2c88e4;
 }
 .destination .heading {
   text-align: center;
