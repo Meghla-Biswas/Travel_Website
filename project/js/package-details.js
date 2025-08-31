@@ -23,11 +23,11 @@ const cityImages = {
     "imges/images/paris5.jpg"
   ],
   "London": [
-    "images/images/london1.jpg",
-    "images/images/london2.jpg",
-    "images/images/london3.jpg",
-    "images/images/london4.jpg",
-    "images/images/london5.jpg"
+    "images/images/london1.jpeg",
+    "images/images/london2.jpeg",
+    "images/images/london3.jpeg",
+    "images/images/london4.jpeg",
+    "images/images/london5.jpeg"
   ],
   "India": [
     "images/images/india1.jpg",
@@ -44,11 +44,11 @@ const cityImages = {
     "images/images/bang5.jpg"
   ],
   "Japan": [
-    "images/images/japan1.jpg",
-    "images/images/japan2.jpg",
-    "images/images/japan3.jpg",
-    "images/images/japan4.jpg",
-    "images/images/japan5.jpg"
+    "images/images/japan1.jpeg",
+    "images/images/japan4.jpeg",
+    "images/images/japan3.jpeg",
+    "images/images/japan7.jpeg",
+    "images/images/japan5.jpeg"
   ],
   "Bali": [
     "images/images/Bali1.jpg",
@@ -65,33 +65,33 @@ const cityImages = {
     "images/images/thai5.jpg"
   ],
   "Switzerland": [
-    "images/images/swit1.jpg",
-    "images/images/swit2.jpg",
-    "images/images/swit3.jpg",
-    "images/images/swit4.jpg",
-    "images/images/swit5.jpg"
+    "images/images/swit1.jpeg",
+    "images/images/swit2.jpeg",
+    "images/images/swit3.jpeg",
+    "images/images/swit4.jpeg",
+    "images/images/swit5.jpeg"
   ],
   "Nepal": [
-    "images/images/nep1.jpg",
-    "images/images/nep2.jpg",
-    "images/images/nep3.jpg",
-    "images/images/nep4.jpg",
-    "images/images/nep5.jpg"
+    "images/images/nep1.jpeg",
+    "images/images/nep2.jpeg",
+    "images/images/nep3.jpeg",
+    "images/images/nep4.jpeg",
+    "images/images/nep5.jpeg"
   ],
   "Maldives": [
 
-    "images/images/mal1.jpg",
-    "images/images/mal2.jpg",
-    "images/images/mal3.jpg",
-    "images/images/mal4.jpg",
-    "images/images/mal5.jpg"
+    "images/images/mal1.jpeg",
+    "images/images/mal2.jpeg",
+    "images/images/mal3.jpeg",
+    "images/images/mal4.jpeg",
+    "images/images/mal5.jpeg"
   ],
   "Rome": [
-    "images/images/rome1.jpg",
-    "images/images/rome2.jpg",
-    "images/images/rome3.jpg",
-    "images/images/rome4.jpg",
-    "images/images/rome5.jpg"
+    "images/images/rome6.jpeg",
+    "images/images/rome7.jpeg",
+    "images/images/rome3.jpeg",
+    "images/images/rome4.jpeg",
+    "images/images/rome5.jpeg"
   ],
   "Paris": [
     "images/images/paris1.jpeg",
