@@ -47,7 +47,8 @@ body {
   position: relative;
   max-width: 1200px;
   margin: 10px auto;
-  padding: 14px 36px; /* space for arrows */
+  padding: 14px 36px;
+
 }
 
 .carousel-viewport {
@@ -161,8 +162,10 @@ body {
 
 /* SERVICES SECTION */
 .services {
-  margin: 50px auto;
+  margin: 0;
+  margin-top: 0;
   text-align: center;
+  background: linear-gradient(to right,  #8fecd0,#98c6f5);
 }
 .services .heading {
   font-size: 2rem;
@@ -174,6 +177,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0 50px;
+  
 }
 .service-card {
   background: #e6fff2;
@@ -181,6 +185,7 @@ body {
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 8px;
 }
 .service-card img {
   width: 100%;
@@ -212,4 +217,7 @@ body {
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+.packages{
+background: linear-gradient(to right, #98c6f5, #8fecd0);
 }

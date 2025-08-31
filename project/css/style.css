@@ -446,13 +446,13 @@ section {
 
 .destination {
   padding: 4rem 9%;
-  background: rgb(172, 211, 242);
+  background: linear-gradient(to right,  #8fecd0,#98c6f5);
 
 }
 
 .destination  .heading span{
   color: white;;
-  background-color: #2c88e4;
+  background-color: #2f71b4;
 }
 .destination .heading {
   text-align: center;
@@ -593,7 +593,7 @@ section {
 .offers {
   padding: 2rem;
 
-  background: #eff6f6;
+ background: linear-gradient(to right, #98c6f5, #8fecd0);
 }
 
 .heading {
