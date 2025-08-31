@@ -21,17 +21,15 @@ body {
     var(--c-55) 100%
   );
   min-height: 100vh;
-  /* margin-top: -80px;  <-- remove this */
-  /* margin: 0; already set */
-  padding-top: 80px; /* keep this for navbar offset */
+
+  padding-top: 80px; 
 }
 
 html {
   font-size: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  /* scroll-padding-top: 6rem; */
-  /* scroll-behavior: smooth; */
+
   scroll-padding-top: 80px;
 }
 .heading {
