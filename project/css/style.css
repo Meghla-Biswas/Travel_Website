@@ -84,9 +84,7 @@ section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 } 
 
-/* .navbar a:hover {
-  color: white;
-} */
+
  .navbar a {
   color: white !important;
 }
@@ -162,7 +160,7 @@ section {
   width: 100%;
   text-align: center;
   padding: 10px;
-  background-color: rgba(20,77,75,0.85);
+  background-color: rgba(57, 168, 164, 0.85);
 }
 .search-bar input {
   border: 1px solid black;
@@ -242,7 +240,8 @@ section {
 }
 
 .login-form form label {
-  font-size: 18px;
+  margin-top: 8px;
+  font-size: 20px;
 }
 .login-form form .btn {
   display: block;
@@ -258,7 +257,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #151515;
-  background-color: white;
+  background-color: #11bf8b;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -269,7 +268,8 @@ section {
 }
 
 .login-form form .btn:hover {
-  background-color: #20c997;
+  background-color: #26c69e;
+  color: white;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
@@ -285,6 +285,7 @@ section {
 }
 .login-form form p a {
   color: #f55b13;
+  text-decoration: none;
 }
 .login-form form p a :hover {
   color: burlywood;
@@ -400,9 +401,9 @@ section {
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 .Home .content p {
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #e0e2da;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 .Home .Video-Container video {
   position: absolute;
