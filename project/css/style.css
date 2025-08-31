@@ -446,7 +446,8 @@ section {
 
 .destination {
   padding: 4rem 9%;
-  background: white;
+  background: rgb(172, 211, 242);
+
 }
 
 .destination  .heading span{
