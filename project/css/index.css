@@ -102,15 +102,20 @@ body {
 .card.btn {
   display:inline-block;
   margin-top:10px;
-  background:linear-gradient( 135deg,
-  var(--c-15),rgb(82, 82, 225));
+
   color:#1b1b1b;
   padding:8px 12px;
   border-radius:6px;
   text-decoration:none;
   font-weight:700;
+ 
 }
-.btn:hover { background:#ffbf3f; }
+.card .overview-btn {
+  background-color: #3e6755;
+  color: #fff;
+}
+
+.btn:hover { background:#008a4f; }
 
 /* hover dull effect */
 .carousel-track:hover .card {
