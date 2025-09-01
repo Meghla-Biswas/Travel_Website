@@ -21,14 +21,16 @@ body {
     var(--c-55) 100%
   );
   min-height: 100vh;
-  padding: 0;
+
+  padding-top: 90px; 
 }
 
 html {
   font-size: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+
+  scroll-padding-top: 90px;
 }
 .heading {
   text-align: center;
@@ -82,8 +84,11 @@ section {
   backdrop-filter: blur(6px);
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    height: 90px; 
+      padding: 0 40px; 
   background: linear-gradient(135deg, #1e90ff, #20c997);
 } 
+
 
  .navbar a {
   color: white !important;
@@ -160,6 +165,7 @@ section {
   width: 100%;
   text-align: center;
   padding: 10px;
+  background-color: rgba(57, 168, 164, 0.85);
   background-color: rgba(27, 161, 157, 0.85);
 }
 .search-bar input {
@@ -240,7 +246,8 @@ section {
 }
 
 .login-form form label {
-  font-size: 18px;
+  margin-top: 8px;
+  font-size: 20px;
 }
 .login-form form .btn {
   display: block;
@@ -256,6 +263,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #151515;
+  background-color: #11bf8b;
   background-color: rgb(20, 208, 117);
   border: none;
   border-radius: 20px;
@@ -267,6 +275,8 @@ section {
 }
 
 .login-form form .btn:hover {
+  background-color: #26c69e;
+  color: white;
   background-color: #05635e;
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -284,6 +294,7 @@ section {
 }
 .login-form form p a {
   color: #f55b13;
+  text-decoration: none;
 }
 .login-form form p a :hover {
   color: burlywood;
@@ -327,8 +338,18 @@ section {
     align-items: center;
     justify-content: center;
   }
-
   .navbar .icons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* navbar height অনুযায়ী */
+    left: 0;
+    width: 100%;
+    background-color: #1b908a;
+    border-top: 1px solid #144d4b;
+    padding: 10px 0;
+    z-index: 1000;
+  /* .navbar .icons {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -339,8 +360,8 @@ section {
     border-top: 1px solid #144d4b;
     padding: 10px 0;
     z-index: 1000;
+  } */
   }
-
   .navbar .icons a {
     margin: 5px 0;
     padding: 10px;
@@ -399,9 +420,9 @@ section {
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 .Home .content p {
-  font-size: 3rem;
+  font-size: 2.3rem;
   color: #e0e2da;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
 }
 .Home .Video-Container video {
   position: absolute;
@@ -446,6 +467,7 @@ section {
 .destination {
   padding: 4rem 9%;
   background: linear-gradient(to right,  #8fecd0,#98c6f5);
+
 
 }
 
