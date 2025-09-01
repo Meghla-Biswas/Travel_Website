@@ -1,16 +1,17 @@
-/* ===== General ===== */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: linear-gradient(to right, #16b182, #91c7fe);
 }
-
+* {
+  box-sizing: border-box;
+}
 .page-wrapper {
   display: flex;
   justify-content: center;
   padding: 0 50px;
 }
-
 .details-container {
   display: flex;
   width: 75%;
@@ -18,8 +19,13 @@ body {
   height: 400px;
   gap: 20px;
 }
+.slideshow,
+.details-content {
+  flex: 1;
+  height: 100%;
+}
 
-/* ===== Slider ===== */
+
 .slideshow {
   flex: 1;
   overflow: hidden;
@@ -29,14 +35,12 @@ body {
   position: relative;
   background: #fff;
 }
-
 .slides {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 .slides img {
   position: absolute;
   top: 0;
@@ -46,12 +50,11 @@ body {
   object-fit: cover;
   display: none;
 }
-
 .slides img.active {
   display: block;
 }
 
-/* ===== Details ===== */
+
 .details-content {
   flex: 1;
   background: #fff;
@@ -61,22 +64,19 @@ body {
   height: 100%;
   overflow-y: auto;
 }
-
 .details-content h2 {
   margin-top: 0;
 }
-
 #services-list {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
-
 #services-list li {
   margin: 5px 0;
 }
 
-/* ===== Buttons ===== */
+
 .buttons {
   margin-top: 20px;
 }
@@ -96,7 +96,7 @@ body {
   background: #005fa3;
 }
 
-/* ===== Page Header ===== */
+
 .page-header {
   width: 100%;
   text-align: center;
@@ -126,7 +126,7 @@ body {
   z-index: 1;
 }
 
-/* ===== Back Arrow ===== */
+
 .back-arrow {
   position: absolute;
   top: 20px;
@@ -147,7 +147,7 @@ body {
   transform: scale(1.1);
 }
 
-/* ===== Modals ===== */
+
 .modal {
   display: none;
   position: fixed;
@@ -164,7 +164,6 @@ body {
   display: flex;
   opacity: 1;
 }
-
 .modal-content {
   position: relative;
   background: linear-gradient(135deg, #ffffff, #f7f9fc);
@@ -182,7 +181,6 @@ body {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
-
 .modal-content h3,
 .modal-content h2 {
   margin-top: 0;
@@ -192,7 +190,6 @@ body {
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
-
 .close {
   position: absolute;
   top: 12px;
@@ -206,17 +203,18 @@ body {
 .close:hover {
   color: #ff4b4b;
 }
-
 .modal-content label {
   font-size: 0.95rem;
   display: block;
   margin: 12px 0;
   color: #333;
 }
-
 .modal-content input[type="number"],
 .modal-content input[type="text"],
-.modal-content input[type="date"] {
+.modal-content input[type="date"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"],
+.modal-content select {
   width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -224,6 +222,7 @@ body {
   margin-top: 6px;
   font-size: 0.95rem;
 }
+
 
 .options label {
   display: flex;
@@ -256,9 +255,12 @@ body {
   top: -2px;
 }
 
-/* ===== Action Buttons ===== */
+
 .update-btn,
-.book-confirm {
+.book-confirm,
+.proceed-info,
+.submit-info,
+.final-ok {
   display: inline-block;
   width: 100%;
   margin-top: 20px;
@@ -272,8 +274,94 @@ body {
   transition: transform 0.2s ease, background 0.3s ease;
 }
 .update-btn:hover,
-.book-confirm:hover {
+.book-confirm:hover,
+.proceed-info:hover,
+.submit-info:hover,
+.final-ok:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #005fa3, #00a6d6);
 }
-/*finalcode*/
+
+
+#confirm-services {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+
+
+.confetti-box {
+  overflow: hidden;
+  position: relative;
+}
+.confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.confetti span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  top: -10px;
+  animation: fall 3s linear infinite;
+}
+.confetti span:nth-child(2n) {
+  background: yellow;
+}
+.confetti span:nth-child(3n) {
+  background: blue;
+}
+.confetti span:nth-child(4n) {
+  background: green;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(600px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+#infoModal .modal-content label {
+  font-weight: 500;
+}
+#infoModal input {
+  width: 92%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+}
+#infoModal .submit-info {
+  background: linear-gradient(135deg, #16b182, #91c7fe);
+}
+#infoModal .submit-info:hover {
+  background: linear-gradient(135deg, #119870, #70aefc);
+}
+
+.submit-info,
+.final-ok {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px 0;
+  background: linear-gradient(135deg, #0077cc, #00c6ff);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.submit-info:hover,
+.final-ok:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #005fa3, #00a6d6);
+}

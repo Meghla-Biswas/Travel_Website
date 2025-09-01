@@ -8,26 +8,28 @@
 </head>
 <body>
 
-  <!-- final code -->
+ 
+  
   <a href="javascript:history.back()" class="back-arrow">
     <i class="fa fa-arrow-left"></i>
   </a>
 
   
+  
   <section class="page-header">
     <h1 class="floating-title">Package Details</h1>
   </section>
 
-  
+ 
   <div class="page-wrapper">
     <div class="details-container">
+
       
-     
       <div class="slideshow">
         <div class="slides"></div>
       </div>
 
-    
+     
       <div class="details-content">
         <h2 id="city-name">Tour Package</h2>
 
@@ -50,7 +52,7 @@
     </div>
   </div>
 
-
+  
   <div id="adjustModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -66,6 +68,20 @@
         <input type="number" id="adjust-days" value="1" min="1" />
       </label>
 
+      <label>
+        Number of People:
+        <input type="number" id="num-people" value="1" min="1" />
+      </label>
+
+      <label>
+        Room Type:
+        <select id="room-type">
+          <option value="single">Single Bed</option>
+          <option value="double" selected>Double Bed</option>
+          <option value="suite">Suite</option>
+        </select>
+      </label>
+
       <div class="options">
         <label><input type="checkbox" id="opt-breakfast" checked> Include Breakfast 🍳</label>
         <label><input type="checkbox" id="opt-dinner" checked> Include Dinner 🍽️</label>
@@ -77,22 +93,63 @@
     </div>
   </div>
 
-  
+ 
   <div id="bookingModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>🎉 Congratulations!</h2>
-      <p>Your booking has been confirmed.</p>
-
+      <h2>Booking Summary</h2>
       <ul>
         <li>City: <span id="city-name-confirm"></span></li>
         <li>Duration: <span id="confirm-days"></span> days</li>
         <li>Start Date: <span id="confirm-start"></span></li>
         <li>End Date: <span id="confirm-end"></span></li>
+        <li>Number of People: <span id="confirm-people"></span></li>
+        <li>Room Type: <span id="confirm-room"></span></li>
+        <li>Services:</li>
+        <ul id="confirm-services"></ul>
         <li>Total Cost: $<span id="confirm-cost"></span></li>
       </ul>
+      <button class="btn book-confirm">Confirm Booking</button>
+    </div>
+  </div>
 
-      <button class="btn book-confirm">OK 👍</button>
+  
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Enter Your Information</h2>
+      <label>
+        Full Name:
+        <input type="text" id="user-name" placeholder="John Doe" />
+      </label>
+      <label>
+        Email:
+        <input type="email" id="user-email" placeholder="example@mail.com" />
+      </label>
+      <label>
+        Phone:
+        <input type="tel" id="user-phone" placeholder="+1234567890" />
+      </label>
+      <button class="btn submit-info">Submit</button>
+    </div>
+  </div>
+
+
+<div id="securityModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Confirm Your Information</h3>
+    <p>Are all your details correct?</p>
+    <button class="btn final-ok">Yes, Confirm</button>
+  </div>
+</div>
+  
+  <div id="congratsModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>🎉 Congratulations!</h2>
+      <p>Your booking has been confirmed successfully.</p>
+      <button class="btn congrats-ok">OK 👍</button>
     </div>
   </div>
 
