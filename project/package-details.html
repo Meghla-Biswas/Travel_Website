@@ -8,26 +8,26 @@
 </head>
 <body>
   
-  <!-- Back Arrow -->
+ 
   <a href="javascript:history.back()" class="back-arrow">
     <i class="fa fa-arrow-left"></i>
   </a>
 
-  <!-- Floating Page Title -->
+  
   <section class="page-header">
     <h1 class="floating-title">Package Details</h1>
   </section>
 
-  <!-- Main Content -->
+ 
   <div class="page-wrapper">
     <div class="details-container">
       
-      <!-- Slideshow -->
+    
       <div class="slideshow">
-        <div class="slides"></div> <!-- JS will populate images -->
+        <div class="slides"></div>
       </div>
 
-      <!-- Content -->
+     
       <div class="details-content">
         <h2 id="city-name">Tour Package</h2>
 
@@ -50,36 +50,52 @@
     </div>
   </div>
 
-  <!-- Modal (Adjust Form) -->
+ 
   <div id="adjustModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h3>Adjust Your Package</h3>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Adjust Your Package</h3>
 
-      <label>
-        Duration (days): 
-        <input type="number" id="adjust-days" value="1" min="1" />
-      </label>
+    <label>
+      Duration (days): 
+      <input type="number" id="adjust-days" value="1" min="1" />
+    </label>
 
-      <div class="options">
-        <label><input type="checkbox" id="opt-breakfast" checked> Include Breakfast</label>
-        <label><input type="checkbox" id="opt-dinner" checked> Include Dinner</label>
-        <label><input type="checkbox" id="opt-tour" checked> Include City Tour & Guidance</label>
-        <label><input type="checkbox" id="opt-transport" checked> Include Airport Transport</label>
-      </div>
-
-      <button class="btn update-btn">Update</button>
+    <div class="options">
+      <label><input type="checkbox" id="opt-breakfast" checked> Include Breakfast</label>
+      <label><input type="checkbox" id="opt-dinner" checked> Include Dinner</label>
+      <label><input type="checkbox" id="opt-tour" checked> Include City Tour & Guidance</label>
+      <label><input type="checkbox" id="opt-transport" checked> Include Airport Transport</label>
     </div>
-  </div>
 
-  <!-- Booking Confirmation Modal -->
+    <button class="btn update-btn">Update</button>
+  </div>
+</div>
+
+
+ 
   <div id="bookingModal" class="modal">
-    <div class="modal-content">
-      <span id="bookingClose" class="close">&times;</span>
-      <h2>Congratulations!</h2>
-      <p>Your booking has been confirmed.</p>
-    </div>
+  <div class="modal-content">
+    <span id="bookingClose" class="close">&times;</span>
+
+    <!-- Heading with emoji -->
+    <h2>🎉 Congratulations!</h2>
+
+    <!-- Confirmation message -->
+    <p>✅ Your booking has been <strong>successfully confirmed</strong>.</p>
+    <p>✈️ Get ready for an amazing trip to <span id="city-name-confirm"></span>!</p>
+
+    <!-- Extra details -->
+    <ul class="booking-details">
+      <li>📅 Duration: <span id="confirm-days"></span> days</li>
+      <li>💰 Total Cost: $<span id="confirm-cost"></span></li>
+    </ul>
+
+    <!-- Button -->
+    <button class="book-confirm">✨ Awesome, Thanks!</button>
   </div>
+</div>
+
 
   <script src="js/package-details.js"></script>
 </body>
