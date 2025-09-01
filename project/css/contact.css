@@ -73,7 +73,6 @@ textarea {
   background: #20c997;
 }
 
-/* Calendar */
 .calendarBox {
   width: 100%;
   margin-bottom: 15px;
@@ -84,8 +83,11 @@ textarea {
   border-radius: 8px;
   border: 1px solid #ddd;
 }
+.calendarBox {
+color: black;
+font-size: 18px;
+}
 
-/* Social Links */
 .social-links {
   margin-top: 20px;
 }
@@ -102,7 +104,6 @@ textarea {
   transform: scale(1.2);
 }
 
-/* Map */
 .map {
   margin-top: 30px;
   border-radius: 15px;
@@ -110,7 +111,7 @@ textarea {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Animation */
+
 @keyframes fadeInUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
