@@ -594,11 +594,11 @@ section {
  background: linear-gradient(to right, #98c6f5, #8fecd0);
 }
 
-.heading {
+.offers .heading {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 36px;
   margin-bottom: 0.25rem;
-  color: #1b9f77;
+  color: #0b7857;
 }
 .heading span{
   font-size: 43px;
@@ -623,7 +623,7 @@ section {
 
 .offer-left .box {
   flex: 1;
-  background: #fff;
+  background: #ffffff;
   padding: 1.5rem;
   border-radius: 0.8rem;
   text-align: center;
