@@ -20,7 +20,7 @@ background: rgb(68, 114, 231);
 }
 
 .review .box {
-  background: #fff;
+  background:fixed;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
