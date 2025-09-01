@@ -1,4 +1,4 @@
-
+/* ===== General ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,7 +9,6 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 50px;
-  background: linear-gradient(to right, #16b182, #91c7fe);
 }
 
 .details-container {
@@ -20,59 +19,64 @@ body {
   gap: 20px;
 }
 
-
+/* ===== Slider ===== */
 .slideshow {
   flex: 1;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   height: 100%;
+  position: relative;
   background: #fff;
 }
 
 .slides {
-  display: flex;
+  position: relative;
   width: 100%;
-  height: 400px;
-  animation: slide 25s infinite;
+  height: 100%;
+  overflow: hidden;
 }
+
 .slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
-}
-@keyframes slide {
-  0%, 15%   { transform: translateX(0); }
-  20%, 35%  { transform: translateX(-100%); }
-  40%, 55%  { transform: translateX(-200%); }
-  60%, 75%  { transform: translateX(-300%); }
-  80%, 100% { transform: translateX(-400%); }
+  display: none;
 }
 
+.slides img.active {
+  display: block;
+}
 
+/* ===== Details ===== */
 .details-content {
   flex: 1;
-  background: #fff; 
+  background: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  height: 86%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  height: 100%;
   overflow-y: auto;
 }
+
 .details-content h2 {
   margin-top: 0;
 }
+
 #services-list {
   list-style: none;
   padding: 0;
   margin: 20px 0;
 }
+
 #services-list li {
   margin: 5px 0;
 }
 
-
+/* ===== Buttons ===== */
 .buttons {
   margin-top: 20px;
 }
@@ -92,7 +96,7 @@ body {
   background: #005fa3;
 }
 
-
+/* ===== Page Header ===== */
 .page-header {
   width: 100%;
   text-align: center;
@@ -106,7 +110,7 @@ body {
   padding: 10px 40px;
   background: #fff;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   color: #333;
   position: relative;
   z-index: 2;
@@ -122,7 +126,7 @@ body {
   z-index: 1;
 }
 
-
+/* ===== Back Arrow ===== */
 .back-arrow {
   position: absolute;
   top: 20px;
@@ -132,7 +136,7 @@ body {
   background: #fff;
   border-radius: 50%;
   padding: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   z-index: 2000;
   transition: all 0.3s ease;
@@ -143,14 +147,14 @@ body {
   transform: scale(1.1);
 }
 
-
+/* ===== Modals ===== */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
   inset: 0;
   backdrop-filter: blur(6px);
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -160,6 +164,7 @@ body {
   display: flex;
   opacity: 1;
 }
+
 .modal-content {
   position: relative;
   background: linear-gradient(135deg, #ffffff, #f7f9fc);
@@ -168,7 +173,7 @@ body {
   text-align: left;
   width: 420px;
   max-width: 90%;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
   transform: translateY(-30px) scale(0.9);
   opacity: 0;
   transition: all 0.3s ease;
@@ -177,22 +182,16 @@ body {
   transform: translateY(0) scale(1);
   opacity: 1;
 }
-.modal.hide .modal-content {
-  transform: translateY(40px) scale(0.95);
-  opacity: 0;
-}
 
-
-.modal-content h3 {
+.modal-content h3,
+.modal-content h2 {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 1.4rem;
   font-weight: 600;
   color: #222;
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
 }
-
 
 .close {
   position: absolute;
@@ -208,16 +207,16 @@ body {
   color: #ff4b4b;
 }
 
-
 .modal-content label {
   font-size: 0.95rem;
   display: block;
   margin: 12px 0;
   color: #333;
 }
+
 .modal-content input[type="number"],
 .modal-content input[type="text"],
-.modal-content input[type="email"] {
+.modal-content input[type="date"] {
   width: 90%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -225,7 +224,6 @@ body {
   margin-top: 6px;
   font-size: 0.95rem;
 }
-
 
 .options label {
   display: flex;
@@ -258,8 +256,9 @@ body {
   top: -2px;
 }
 
-/* Action Buttons */
-.update-btn, .book-confirm {
+/* ===== Action Buttons ===== */
+.update-btn,
+.book-confirm {
   display: inline-block;
   width: 100%;
   margin-top: 20px;
@@ -272,7 +271,8 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease, background 0.3s ease;
 }
-.update-btn:hover, .book-confirm:hover {
+.update-btn:hover,
+.book-confirm:hover {
   transform: translateY(-2px);
   background: linear-gradient(135deg, #005fa3, #00a6d6);
 }
