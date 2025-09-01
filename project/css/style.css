@@ -30,7 +30,7 @@ html {
   font-size: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 70px !important;
+  scroll-padding-top: 50px !important;
 }
 .heading {
   text-align: center;
@@ -45,7 +45,7 @@ html {
 }
 section {
   padding: 2rem 9%;
-  scroll-margin-top: 70px !important;
+  scroll-margin-top: 50px !important;
 }
 
 .Home .btn {
@@ -348,13 +348,13 @@ section {
 html {
   font-size: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Smooth scroll */
-  scroll-padding-top: 70px; /* Prevent content hiding behind navbar */
+  scroll-behavior: smooth; 
+  scroll-padding-top: 50px; 
 }
 section {
-      scroll-margin-top: 70px;
+      scroll-margin-top: 50px;
     }
-/* -------------------- Headings -------------------- */
+
 .heading {
   text-align: center;
   padding: 2.5rem 0;
@@ -370,7 +370,7 @@ section {
   padding: 2rem 9%;
 }
 
-/* -------------------- Buttons -------------------- */
+
 .Home .btn, .btn {
   display: inline-block;
   margin-top: 0.5rem;
@@ -399,9 +399,9 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* -------------------- Navbar -------------------- */
+
 .navbar {
-  position: sticky; /* Fixed navbar replaced with sticky */
+  position: sticky !important; 
   top: 0;
   z-index: 1000;
   display: flex;
@@ -475,7 +475,7 @@ section {
   cursor: pointer;
 }
 
-/* -------------------- Search Bar -------------------- */
+
 .search-bar {
   display: none;
   width: 100%;
@@ -495,7 +495,7 @@ section {
   display: block;
 }
 
-/* -------------------- Overlay & Login -------------------- */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -586,7 +586,7 @@ section {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* -------------------- Mobile Menu -------------------- */
+
 #menuBar {
   display: none;
   font-size: 2rem;
@@ -633,7 +633,7 @@ section {
   }
 }
 
-/* -------------------- Home Section -------------------- */
+
 .Home {
   min-height: 100vh;
   display: flex;
@@ -694,7 +694,7 @@ section {
   background: #20c997;
 }
 
-/* -------------------- Destination Section -------------------- */
+
 .destination {
   padding: 4rem 9%;
   background: linear-gradient(to right,  #8fecd0,#98c6f5);
@@ -779,7 +779,7 @@ section {
   transform: translateY(-3px);
 }
 
-/* -------------------- Offers Section -------------------- */
+
 .offers {
   padding: 2rem;
   background: linear-gradient(to right, #98c6f5, #8fecd0);
@@ -881,7 +881,7 @@ section {
   flex: 0 1 40%;
 }
 
-/* -------------------- Responsive -------------------- */
+
 @media (max-width: 768px) {
   .offer-left, .offer-right { flex: 1 1 100%; }
   .destination .box-container { flex-direction: column; }

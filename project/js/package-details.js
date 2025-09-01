@@ -1,4 +1,4 @@
-// ======= PACKAGE DETAILS JS (FULL UPDATED) =======
+
 
 const urlParams = new URLSearchParams(window.location.search);
 const city = urlParams.get("city") || "Unknown City";
@@ -12,7 +12,7 @@ const SERVICE_COSTS = {
   transport: 100   
 };
 
-// ======= CITY IMAGES FOR SLIDER =======
+
 const cityImages = {
   "Paris": [
     "images/images/paris1.jpg",
@@ -100,11 +100,11 @@ const cityImages = {
   ]
 };
 
-// Populate slider images
+
 function populateSlider(city) {
   const slidesContainer = document.querySelector('.slides');
   if (!slidesContainer) return;
-  slidesContainer.innerHTML = ""; // clear previous images
+  slidesContainer.innerHTML = ""; 
   const images = cityImages[city] || cityImages['default'];
   images.forEach((url, i) => {
     const img = document.createElement('img');
@@ -114,9 +114,9 @@ function populateSlider(city) {
   });
 }
 
-// ======= DOCUMENT READY =======
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Elements
+  
   const cityNameEl = document.getElementById("city-name");
   const priceEl = document.getElementById("price");
   const daysEl = document.getElementById("days");
@@ -133,15 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.querySelector(".close");
   const doneBtn = document.querySelector(".update-btn"); 
 
-  // Initial values
+ 
   cityNameEl.innerText = `${city} Tour Package`;
   adjustDaysInput.value = defaultDays;
   daysEl.innerText = defaultDays;
 
-  // Populate slider dynamically
+ 
   populateSlider(city);
 
-  // ======= COST CALCULATION =======
+  
   function calculateCost() {
     const days = Math.max(1, parseInt(adjustDaysInput.value) || 1);
     let perDayCost = price;
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   calculateCost();
 
-  // ======= MODAL CONTROLS =======
+ 
   if (adjustBtn) {
     adjustBtn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ======= BOOKING MODAL =======
+  
   const bookBtn = document.querySelector('.book-btn');
   const bookingModal = document.getElementById('bookingModal');
   const bookingClose = document.getElementById('bookingClose');
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === bookingModal) bookingModal.style.display = 'none';
   });
 
-  // ======= BACK ARROW FUNCTIONALITY =======
+ 
   const backArrow = document.querySelector('.back-arrow');
   if (backArrow) {
     backArrow.addEventListener('click', (e) => {
