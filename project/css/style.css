@@ -33,7 +33,7 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 
-  scroll-padding-top: 50px !important;
+  scroll-padding-top: 40px !important;
 
   
 }
@@ -50,7 +50,7 @@ html {
 }
 section {
   padding: 2rem 9%;
-  scroll-margin-top: 50px !important;
+  scroll-margin-top: 40px !important;
 }
 
 .Home .btn {
@@ -90,7 +90,7 @@ section {
   backdrop-filter: blur(6px);
   background-color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    height: 90px; 
+    height: 75px; 
       padding: 0 40px; 
   background: linear-gradient(135deg, #1e90ff, #20c997);
 } 
