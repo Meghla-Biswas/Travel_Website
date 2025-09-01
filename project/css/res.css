@@ -1,0 +1,44 @@
+/* ========== Responsive Design (Mobile) ========== */
+@media (max-width: 768px) {
+
+  /* Review Section */
+  .review .review-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .review .review-slider .box {
+    width: 100%;
+  }
+
+  /* Travel Blog Section */
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr; /* ২টা ছবি প্রতি লাইন */
+  }
+
+  /* Contact Section */
+  .contact .row {
+    flex-direction: column;
+  }
+
+  .contact .row form,
+  .contact .row .image {
+    width: 100%;
+  }
+
+  /* Footer Section */
+  .footer .box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer .box {
+    text-align: center;
+  }
+}
