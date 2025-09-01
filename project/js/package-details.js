@@ -1,10 +1,10 @@
-// ================= Get URL Params =================
+
 const urlParams = new URLSearchParams(window.location.search);
 const city = urlParams.get("city") || "Unknown City";
 const price = parseFloat(urlParams.get("price")) || 0;
 const defaultDays = parseInt(urlParams.get("days")) || 1;
 
-// ================= Service Costs =================
+
 const SERVICE_COSTS = {
   breakfast: 30,
   dinner: 45,
@@ -12,7 +12,7 @@ const SERVICE_COSTS = {
   transport: 100,
 };
 
-// ================= City Images =================
+
 const cityImages = {
   Paris: [
     "images/images/paris1.jpg",
@@ -93,7 +93,7 @@ const cityImages = {
   ],
 };
 
-// ================= Populate Slider =================
+
 function populateSlider(city) {
   const slidesContainer = document.querySelector(".slides");
   if (!slidesContainer) return;
@@ -107,7 +107,7 @@ function populateSlider(city) {
   });
 }
 
-// ================= Slider Logic =================
+
 let slideIndex = 0;
 function startSlider() {
   const slidesContainer = document.querySelector(".slides");
@@ -118,12 +118,12 @@ function startSlider() {
   slides.forEach((img) => (img.style.display = "none"));
   slides[slideIndex].style.display = "block";
   slideIndex = (slideIndex + 1) % slides.length;
-  setTimeout(startSlider, 3000); // Slide every 3 seconds
+  setTimeout(startSlider, 3000); 
 }
 
-// ================= On DOM Load =================
+
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== Elements =====
+  
   const cityNameEl = document.getElementById("city-name");
   const priceEl = document.getElementById("price");
   const daysEl = document.getElementById("days");
@@ -152,41 +152,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmStart = document.getElementById("confirm-start");
   const confirmEnd = document.getElementById("confirm-end");
 
-  // ===== Initialize =====
+ 
   cityNameEl.innerText = `${city} Tour Package`;
   adjustDaysInput.value = defaultDays;
   daysEl.innerText = defaultDays;
   populateSlider(city);
   startSlider();
 
-  // ===== Cost Calculation =====
+ 
   function calculateCost() {
     const days = Math.max(1, parseInt(adjustDaysInput.value) || 1);
 
-    // Per-day cost
+    
     let perDayCost = price;
     if (cbBreakfast.checked) perDayCost += SERVICE_COSTS.breakfast;
     if (cbDinner.checked) perDayCost += SERVICE_COSTS.dinner;
 
-    // One-time costs
+  
     let oneTimeCost = 0;
     if (cbTour.checked) oneTimeCost += SERVICE_COSTS.tour;
     if (cbTransport.checked) oneTimeCost += SERVICE_COSTS.transport;
 
-    // Total
+    
     const total = perDayCost * days + oneTimeCost;
 
-    // Update main details
+    
     priceEl.innerText = perDayCost.toFixed(2);
     daysEl.innerText = days;
     totalCostEl.innerText = total.toFixed(2);
 
-    // ===== Update services list dynamically =====
+    
     const servicesList = document.getElementById("services-list");
     if (!servicesList) return;
-    servicesList.innerHTML = ""; // Clear existing list
+    servicesList.innerHTML = "";
 
-    // Hotel always
+    
     const liHotel = document.createElement("li");
     liHotel.textContent = `Hotel: The Taj Palace (${days} nights)`;
     servicesList.appendChild(liHotel);
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ===== Event Listeners for Cost =====
+  
   [adjustDaysInput, cbBreakfast, cbDinner, cbTour, cbTransport].forEach(
     (el) => {
       el.addEventListener("input", calculateCost);
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   calculateCost();
 
-  // ===== Adjust Modal Open =====
+  
   document.querySelectorAll(".adjust-btn").forEach((button) => {
     button.addEventListener("click", () => {
       adjustModal.classList.add("show");
@@ -235,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ===== Adjust Modal Close =====
+  
   function closeAdjustModal() {
     adjustModal.classList.remove("show");
     adjustModal.classList.add("hide");
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ===== Booking Modal Open =====
+ 
   bookBtn.addEventListener("click", (e) => {
     e.preventDefault();
     if (confirmCity) confirmCity.textContent = city;
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
     bookingModal.classList.remove("hide");
   });
 
-  // ===== Booking Modal Close =====
+  
   function closeBookingModal() {
     bookingModal.classList.remove("show");
     bookingModal.classList.add("hide");
@@ -285,13 +285,13 @@ document.addEventListener("DOMContentLoaded", () => {
   bookingCloseBtn.addEventListener("click", closeBookingModal);
   bookConfirmBtn.addEventListener("click", closeBookingModal);
 
-  // ===== Click Outside Modals =====
+  
   window.addEventListener("click", (e) => {
     if (e.target === adjustModal) closeAdjustModal();
     if (e.target === bookingModal) closeBookingModal();
   });
 
-  // ===== Escape Key =====
+ 
   window.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (adjustModal.classList.contains("show")) closeAdjustModal();
@@ -299,10 +299,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ===== Back Arrow =====
+ 
   const backArrow = document.querySelector(".back-arrow");
   backArrow?.addEventListener("click", (e) => {
     e.preventDefault();
     window.history.back();
   });
 });
+// final code

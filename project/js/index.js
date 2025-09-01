@@ -89,3 +89,4 @@ sliders.forEach(slider => {
   slider.parentElement.addEventListener("mouseover", startSlider);
   slider.parentElement.addEventListener("mouseout", stopSlider);
 });
+//final code
