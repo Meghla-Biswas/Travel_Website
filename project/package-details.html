@@ -7,27 +7,27 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  
- 
+
+  <!-- Back Button -->
   <a href="javascript:history.back()" class="back-arrow">
     <i class="fa fa-arrow-left"></i>
   </a>
 
-  
+  <!-- Page Header -->
   <section class="page-header">
     <h1 class="floating-title">Package Details</h1>
   </section>
 
- 
+  <!-- Package Details -->
   <div class="page-wrapper">
     <div class="details-container">
       
-    
+      <!-- Slideshow -->
       <div class="slideshow">
         <div class="slides"></div>
       </div>
 
-     
+      <!-- Details Content -->
       <div class="details-content">
         <h2 id="city-name">Tour Package</h2>
 
@@ -44,58 +44,57 @@
 
         <div class="buttons">
           <a class="btn book-btn" href="#">Book Now</a>
-          <a class="btn adjust-btn" href="#">Adjust Package</a>
+          <button class="adjust-btn btn">Adjust Package ⚙️</button>
         </div>
       </div>
     </div>
   </div>
 
- 
+  <!-- Adjust Modal -->
   <div id="adjustModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h3>Adjust Your Package</h3>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Adjust Your Package</h3>
 
-    <label>
-      Duration (days): 
-      <input type="number" id="adjust-days" value="1" min="1" />
-    </label>
+      <label>
+        Start Date:
+        <input type="date" id="adjust-start" />
+      </label>
 
-    <div class="options">
-      <label><input type="checkbox" id="opt-breakfast" checked> Include Breakfast</label>
-      <label><input type="checkbox" id="opt-dinner" checked> Include Dinner</label>
-      <label><input type="checkbox" id="opt-tour" checked> Include City Tour & Guidance</label>
-      <label><input type="checkbox" id="opt-transport" checked> Include Airport Transport</label>
+      <label>
+        Duration (days):
+        <input type="number" id="adjust-days" value="1" min="1" />
+      </label>
+
+      <div class="options">
+        <label><input type="checkbox" id="opt-breakfast" checked> Include Breakfast 🍳</label>
+        <label><input type="checkbox" id="opt-dinner" checked> Include Dinner 🍽️</label>
+        <label><input type="checkbox" id="opt-tour" checked> Include City Tour 🏛️</label>
+        <label><input type="checkbox" id="opt-transport" checked> Include Airport Transport 🚗</label>
+      </div>
+
+      <button class="btn update-btn">Update</button>
     </div>
-
-    <button class="btn update-btn">Update</button>
   </div>
-</div>
 
-
- 
+  <!-- Booking Modal -->
   <div id="bookingModal" class="modal">
-  <div class="modal-content">
-    <span id="bookingClose" class="close">&times;</span>
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>🎉 Congratulations!</h2>
+      <p>Your booking has been confirmed.</p>
 
-    <!-- Heading with emoji -->
-    <h2>🎉 Congratulations!</h2>
+      <ul>
+        <li>City: <span id="city-name-confirm"></span></li>
+        <li>Duration: <span id="confirm-days"></span> days</li>
+        <li>Start Date: <span id="confirm-start"></span></li>
+        <li>End Date: <span id="confirm-end"></span></li>
+        <li>Total Cost: $<span id="confirm-cost"></span></li>
+      </ul>
 
-    <!-- Confirmation message -->
-    <p>✅ Your booking has been <strong>successfully confirmed</strong>.</p>
-    <p>✈️ Get ready for an amazing trip to <span id="city-name-confirm"></span>!</p>
-
-    <!-- Extra details -->
-    <ul class="booking-details">
-      <li>📅 Duration: <span id="confirm-days"></span> days</li>
-      <li>💰 Total Cost: $<span id="confirm-cost"></span></li>
-    </ul>
-
-    <!-- Button -->
-    <button class="book-confirm">✨ Awesome, Thanks!</button>
+      <button class="btn book-confirm">OK 👍</button>
+    </div>
   </div>
-</div>
-
 
   <script src="js/package-details.js"></script>
 </body>
