@@ -129,12 +129,12 @@ section {
 
 .logo a i {
   color: #1d1f21; 
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   transition: transform 0.3s, color 0.3s;
 }
 
 .logo a:hover i {
-  color: #1d980a;
+  color: #199606;
   transform: rotate(20deg) translateY(-2px);
 }
 /* final code*/
