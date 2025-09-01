@@ -603,7 +603,10 @@ section {
 .heading span{
   font-size: 43px;
 }
-
+.offers .heading{
+  color: rgb(10, 108, 10);
+  font-size: 40px;
+}
 .sub-heading {
   text-align: center;
   font-size: 1.2rem;
