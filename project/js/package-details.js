@@ -1,7 +1,7 @@
 
 const urlParams = new URLSearchParams(window.location.search);
 const city = urlParams.get("city") || "Unknown City";
-const price = parseFloat(urlParams.get("price")) || 0;
+const price = parseFloat(urlParams.get("price")) || 100;
 const defaultDays = parseInt(urlParams.get("days")) || 1;
 
 
@@ -13,84 +13,25 @@ const SERVICE_COSTS = {
 };
 
 
+const ROOM_COST_MULTIPLIER = {
+  single: 0.8,
+  double: 1,
+  suite: 1.5,
+};
+
+
 const cityImages = {
-  Paris: [
-    "images/images/paris1.jpg",
-    "images/images/paris2.jpg",
-    "images/images/paris3.jpg",
-    "images/images/paris4.jpg",
-    "images/images/paris5.jpg",
-  ],
-  London: [
-    "images/images/london1.jpeg",
-    "images/images/london2.jpeg",
-    "images/images/london3.jpeg",
-    "images/images/london4.jpeg",
-    "images/images/london5.jpeg",
-  ],
-  India: [
-    "images/images/india1.jpeg",
-    "images/images/india2.jpeg",
-    "images/images/india3.jpeg",
-    "images/images/india4.jpeg",
-    "images/images/india5.jpeg",
-  ],
-  Bangladesh: [
-    "images/images/ban1.jpeg",
-    "images/images/ban2.jpeg",
-    "images/images/ban3.jpeg",
-    "images/images/ban4.jpeg",
-    "images/images/ban5.jpeg",
-  ],
-  Japan: [
-    "images/images/japan1.jpeg",
-    "images/images/japan4.jpeg",
-    "images/images/japan3.jpeg",
-    "images/images/japan7.jpeg",
-    "images/images/japan5.jpeg",
-  ],
-  Bali: [
-    "images/images/Bali1.jpeg",
-    "images/images/Bali2.jpeg",
-    "images/images/Bali3.jpeg",
-    "images/images/Bali4.jpeg",
-    "images/images/Bali5.jpeg",
-  ],
-  Thailand: [
-    "images/images/thai1.jpeg",
-    "images/images/thai2.jpeg",
-    "images/images/thai3.jpeg",
-    "images/images/thai4.jpeg",
-    "images/images/thai5.jpeg",
-  ],
-  Switzerland: [
-    "images/images/swit1.jpeg",
-    "images/images/swit2.jpeg",
-    "images/images/swit3.jpeg",
-    "images/images/swit4.jpeg",
-    "images/images/swit5.jpeg",
-  ],
-  Nepal: [
-    "images/images/nep1.jpeg",
-    "images/images/nep2.jpeg",
-    "images/images/nep3.jpeg",
-    "images/images/nep4.jpeg",
-    "images/images/nep5.jpeg",
-  ],
-  Maldives: [
-    "images/images/mal1.jpeg",
-    "images/images/mal2.jpeg",
-    "images/images/mal3.jpeg",
-    "images/images/mal4.jpeg",
-    "images/images/mal5.jpeg",
-  ],
-  Rome: [
-    "images/images/rome6.jpeg",
-    "images/images/rome7.jpeg",
-    "images/images/rome3.jpeg",
-    "images/images/rome4.jpeg",
-    "images/images/rome5.jpeg",
-  ],
+  Paris: ["images/images/paris1.jpg","images/images/paris2.jpg","images/images/paris3.jpg","images/images/paris4.jpg","images/images/paris5.jpg"],
+  London: ["images/images/london1.jpeg","images/images/london2.jpeg","images/images/london3.jpeg","images/images/london4.jpeg","images/images/london5.jpeg"],
+  India: ["images/images/india1.jpeg","images/images/india2.jpeg","images/images/india3.jpeg","images/images/india4.jpeg","images/images/india5.jpeg"],
+  Bangladesh: ["images/images/ban1.jpeg","images/images/ban2.jpeg","images/images/ban3.jpeg","images/images/ban4.jpeg","images/images/ban5.jpeg"],
+  Japan: ["images/images/japan1.jpeg","images/images/japan4.jpeg","images/images/japan3.jpeg","images/images/japan7.jpeg","images/images/japan5.jpeg"],
+  Bali: ["images/images/Bali1.jpeg","images/images/Bali2.jpeg","images/images/Bali3.jpeg","images/images/Bali4.jpeg","images/images/Bali5.jpeg"],
+  Thailand: ["images/images/thai1.jpeg","images/images/thai2.jpeg","images/images/thai3.jpeg","images/images/thai4.jpeg","images/images/thai5.jpeg"],
+  Switzerland: ["images/images/swit1.jpeg","images/images/swit2.jpeg","images/images/swit3.jpeg","images/images/swit4.jpeg","images/images/swit5.jpeg"],
+  Nepal: ["images/images/nep1.jpeg","images/images/nep2.jpeg","images/images/nep3.jpeg","images/images/nep4.jpeg","images/images/nep5.jpeg"],
+  Maldives: ["images/images/mal1.jpeg","images/images/mal2.jpeg","images/images/mal3.jpeg","images/images/mal4.jpeg","images/images/mal5.jpeg"],
+  Rome: ["images/images/rome6.jpeg","images/images/rome7.jpeg","images/images/rome3.jpeg","images/images/rome4.jpeg","images/images/rome5.jpeg"],
 };
 
 
@@ -102,28 +43,23 @@ function populateSlider(city) {
   images.forEach((url, i) => {
     const img = document.createElement("img");
     img.src = url;
-    img.alt = `Tour Image ${i + 1} - ${city}`;
+    img.alt = `${city} Image ${i + 1}`;
     slidesContainer.appendChild(img);
   });
 }
 
-
 let slideIndex = 0;
 function startSlider() {
-  const slidesContainer = document.querySelector(".slides");
-  if (!slidesContainer) return;
-  const slides = slidesContainer.querySelectorAll("img");
+  const slides = document.querySelectorAll(".slides img");
   if (!slides.length) return;
-
   slides.forEach((img) => (img.style.display = "none"));
   slides[slideIndex].style.display = "block";
   slideIndex = (slideIndex + 1) % slides.length;
-  setTimeout(startSlider, 3000); 
+  setTimeout(startSlider, 3000);
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   const cityNameEl = document.getElementById("city-name");
   const priceEl = document.getElementById("price");
   const daysEl = document.getElementById("days");
@@ -131,6 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const adjustDaysInput = document.getElementById("adjust-days");
   const adjustStartInput = document.getElementById("adjust-start");
+  const numPeopleInput = document.getElementById("num-people");
+  const roomTypeSelect = document.getElementById("room-type");
+
   const cbBreakfast = document.getElementById("opt-breakfast");
   const cbDinner = document.getElementById("opt-dinner");
   const cbTour = document.getElementById("opt-tour");
@@ -138,104 +77,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const adjustModal = document.getElementById("adjustModal");
   const bookingModal = document.getElementById("bookingModal");
+  const infoModal = document.getElementById("infoModal");
+  const securityModal = document.getElementById("securityModal");
+  const congratsModal = document.getElementById("congratsModal");
 
   const adjustCloseBtn = adjustModal.querySelector(".close");
   const doneBtn = adjustModal.querySelector(".update-btn");
-
   const bookingCloseBtn = bookingModal.querySelector(".close");
   const bookBtn = document.querySelector(".book-btn");
   const bookConfirmBtn = bookingModal.querySelector(".book-confirm");
+  const infoSubmitBtn = infoModal ? infoModal.querySelector(".submit-info") : null;
+  const securityConfirmBtn = securityModal ? securityModal.querySelector(".final-ok") : null;
+  const congratsOkBtn = congratsModal.querySelector(".congrats-ok");
 
   const confirmCity = document.getElementById("city-name-confirm");
   const confirmDays = document.getElementById("confirm-days");
-  const confirmCost = document.getElementById("confirm-cost");
   const confirmStart = document.getElementById("confirm-start");
   const confirmEnd = document.getElementById("confirm-end");
+  const confirmPeople = document.getElementById("confirm-people");
+  const confirmRoom = document.getElementById("confirm-room");
+  const confirmCost = document.getElementById("confirm-cost");
+  const confirmServices = document.getElementById("confirm-services");
 
- 
+  
   cityNameEl.innerText = `${city} Tour Package`;
   adjustDaysInput.value = defaultDays;
   daysEl.innerText = defaultDays;
   populateSlider(city);
   startSlider();
+  calculateCost();
 
  
   function calculateCost() {
     const days = Math.max(1, parseInt(adjustDaysInput.value) || 1);
+    const people = Math.max(1, parseInt(numPeopleInput.value) || 1);
+    const roomType = roomTypeSelect.value;
 
-    
-    let perDayCost = price;
-    if (cbBreakfast.checked) perDayCost += SERVICE_COSTS.breakfast;
-    if (cbDinner.checked) perDayCost += SERVICE_COSTS.dinner;
+    let perDayCost = price * ROOM_COST_MULTIPLIER[roomType];
+    perDayCost += cbBreakfast.checked ? SERVICE_COSTS.breakfast : 0;
+    perDayCost += cbDinner.checked ? SERVICE_COSTS.dinner : 0;
 
-  
     let oneTimeCost = 0;
-    if (cbTour.checked) oneTimeCost += SERVICE_COSTS.tour;
-    if (cbTransport.checked) oneTimeCost += SERVICE_COSTS.transport;
+    oneTimeCost += cbTour.checked ? SERVICE_COSTS.tour : 0;
+    oneTimeCost += cbTransport.checked ? SERVICE_COSTS.transport : 0;
 
-    
-    const total = perDayCost * days + oneTimeCost;
+    const total = perDayCost * days * people + oneTimeCost;
 
-    
     priceEl.innerText = perDayCost.toFixed(2);
     daysEl.innerText = days;
     totalCostEl.innerText = total.toFixed(2);
 
-    
     const servicesList = document.getElementById("services-list");
-    if (!servicesList) return;
     servicesList.innerHTML = "";
-
-    
     const liHotel = document.createElement("li");
     liHotel.textContent = `Hotel: The Taj Palace (${days} nights)`;
     servicesList.appendChild(liHotel);
-
-    if (cbBreakfast.checked) {
-      const li = document.createElement("li");
-      li.textContent = `Meals: Breakfast 🍳`;
-      servicesList.appendChild(li);
-    }
-    if (cbDinner.checked) {
-      const li = document.createElement("li");
-      li.textContent = `Meals: Dinner 🍽️`;
-      servicesList.appendChild(li);
-    }
-    if (cbTour.checked) {
-      const li = document.createElement("li");
-      li.textContent = `City Tour & Guidance 🏛️`;
-      servicesList.appendChild(li);
-    }
-    if (cbTransport.checked) {
-      const li = document.createElement("li");
-      li.textContent = `Airport Transport 🚗`;
-      servicesList.appendChild(li);
-    }
+    if (cbBreakfast.checked) servicesList.appendChild(newListItem("Breakfast"));
+    if (cbDinner.checked) servicesList.appendChild(newListItem("Dinner"));
+    if (cbTour.checked) servicesList.appendChild(newListItem("City Tour & Guidance"));
+    if (cbTransport.checked) servicesList.appendChild(newListItem("Airport Transport"));
   }
 
-  
-  [adjustDaysInput, cbBreakfast, cbDinner, cbTour, cbTransport].forEach(
-    (el) => {
-      el.addEventListener("input", calculateCost);
-      if (el.type === "checkbox") el.addEventListener("change", calculateCost);
-    }
-  );
+  function newListItem(text) {
+    const li = document.createElement("li");
+    li.textContent = `Includes: ${text}`;
+    return li;
+  }
 
-  calculateCost();
-
-  
-  document.querySelectorAll(".adjust-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      adjustModal.classList.add("show");
-      adjustModal.classList.remove("hide");
-      if (adjustDaysInput) {
-        adjustDaysInput.focus();
-        adjustDaysInput.select();
-      }
-    });
+  [
+    adjustDaysInput,
+    numPeopleInput,
+    roomTypeSelect,
+    cbBreakfast,
+    cbDinner,
+    cbTour,
+    cbTransport,
+  ].forEach((el) => {
+    el.addEventListener("input", calculateCost);
+    if (el.type === "checkbox") el.addEventListener("change", calculateCost);
   });
 
-  
+
+  document.querySelectorAll(".adjust-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      adjustModal.classList.add("show");
+      adjustModal.classList.remove("hide");
+    });
+  });
   function closeAdjustModal() {
     adjustModal.classList.remove("show");
     adjustModal.classList.add("hide");
@@ -246,49 +174,80 @@ document.addEventListener("DOMContentLoaded", () => {
     closeAdjustModal();
   });
 
-  adjustDaysInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      calculateCost();
-      closeAdjustModal();
-    }
-  });
-
- 
+  
   bookBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (confirmCity) confirmCity.textContent = city;
-    if (confirmDays) confirmDays.textContent = daysEl.textContent;
-    if (confirmCost) confirmCost.textContent = totalCostEl.textContent;
-
-    if (adjustStartInput.value) {
-      const startDate = new Date(adjustStartInput.value);
-      const duration = parseInt(daysEl.textContent, 10) || 1;
-      const endDate = new Date(startDate);
-      endDate.setDate(startDate.getDate() + duration);
-      confirmStart.textContent = startDate.toDateString();
+    confirmCity.textContent = city;
+    confirmDays.textContent = adjustDaysInput.value;
+    confirmStart.textContent = adjustStartInput.value ? new Date(adjustStartInput.value).toDateString() : "Not selected";
+    const endDate = adjustStartInput.value ? new Date(adjustStartInput.value) : null;
+    if (endDate) {
+      endDate.setDate(endDate.getDate() + parseInt(adjustDaysInput.value));
       confirmEnd.textContent = endDate.toDateString();
-    } else {
-      confirmStart.textContent = "Not selected";
-      confirmEnd.textContent = "Not calculated";
-    }
+    } else confirmEnd.textContent = "Not calculated";
+    confirmPeople.textContent = numPeopleInput.value;
+    confirmRoom.textContent = roomTypeSelect.value.charAt(0).toUpperCase() + roomTypeSelect.value.slice(1);
+    confirmCost.textContent = totalCostEl.innerText;
+
+    confirmServices.innerHTML = "";
+    if (cbBreakfast.checked) confirmServices.appendChild(newListItem("Breakfast"));
+    if (cbDinner.checked) confirmServices.appendChild(newListItem("Dinner"));
+    if (cbTour.checked) confirmServices.appendChild(newListItem("City Tour & Guidance"));
+    if (cbTransport.checked) confirmServices.appendChild(newListItem("Airport Transport"));
 
     bookingModal.classList.add("show");
     bookingModal.classList.remove("hide");
   });
-
-  
   function closeBookingModal() {
     bookingModal.classList.remove("show");
     bookingModal.classList.add("hide");
   }
   bookingCloseBtn.addEventListener("click", closeBookingModal);
-  bookConfirmBtn.addEventListener("click", closeBookingModal);
+
+
+  bookConfirmBtn.addEventListener("click", () => {
+    closeBookingModal();
+    if (infoModal) {
+      infoModal.classList.add("show");
+      infoModal.classList.remove("hide");
+    }
+  });
+
+ 
+  if (infoSubmitBtn) {
+    infoSubmitBtn.addEventListener("click", () => {
+      infoModal.classList.remove("show");
+      infoModal.classList.add("hide");
+      if (securityModal) {
+        securityModal.classList.add("show");
+        securityModal.classList.remove("hide");
+      }
+    });
+  }
+
+ 
+  if (securityConfirmBtn) {
+    securityConfirmBtn.addEventListener("click", () => {
+      securityModal.classList.remove("show");
+      securityModal.classList.add("hide");
+      congratsModal.classList.add("show");
+      congratsModal.classList.remove("hide");
+    });
+  }
+
+ 
+  congratsOkBtn.addEventListener("click", () => {
+    congratsModal.classList.remove("show");
+    congratsModal.classList.add("hide");
+  });
 
   
   window.addEventListener("click", (e) => {
     if (e.target === adjustModal) closeAdjustModal();
     if (e.target === bookingModal) closeBookingModal();
+    if (infoModal && e.target === infoModal) { infoModal.classList.remove("show"); infoModal.classList.add("hide"); }
+    if (securityModal && e.target === securityModal) { securityModal.classList.remove("show"); securityModal.classList.add("hide"); }
+    if (e.target === congratsModal) congratsModal.classList.remove("show");
   });
 
  
@@ -296,14 +255,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape") {
       if (adjustModal.classList.contains("show")) closeAdjustModal();
       if (bookingModal.classList.contains("show")) closeBookingModal();
+      if (infoModal && infoModal.classList.contains("show")) { infoModal.classList.remove("show"); infoModal.classList.add("hide"); }
+      if (securityModal && securityModal.classList.contains("show")) { securityModal.classList.remove("show"); securityModal.classList.add("hide"); }
+      if (congratsModal.classList.contains("show")) congratsModal.classList.remove("show");
     }
   });
 
- 
-  const backArrow = document.querySelector(".back-arrow");
-  backArrow?.addEventListener("click", (e) => {
+  
+  document.querySelector(".back-arrow").addEventListener("click", (e) => {
     e.preventDefault();
     window.history.back();
   });
 });
-// final code
